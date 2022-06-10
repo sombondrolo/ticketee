@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :ticket do
-    name { "Example project" }
+    name { "Example ticket" }
     description { "An example ticket, nothing more" }
   end
 end
