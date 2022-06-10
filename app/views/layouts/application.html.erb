@@ -2,19 +2,15 @@
 <html>
   <head>
     <!-- <title>Ticketee</title> -->
-    <!-- <%= @title or "Project Title" %></title> -->
-    <%# <!--  %>
-    <title><%= yield :title or "Ticketee_from_appli" %></title> 
-    <%# --> %>
-    <!--
+    <!-- <title><%# @title or "Project Title" %></title> -->
+    <!-- <title><%# yield :title || "Ticketee_from_appli" %></title> -->
     <title>
       <% if content_for?(:title) %>
         <%= yield :title %>
       <% else %>
-        Ticketee_from_application
+        Ticketee_application.html
       <% end %>
     </title>
-    -->
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
