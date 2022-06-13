@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     root "application#index"
 
     resources :projects, except: [:index, :show]
+    resources :users
   end
 
   resources :projects, only: [:index, :show] do
