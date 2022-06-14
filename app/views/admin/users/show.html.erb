@@ -1,5 +1,6 @@
 <header>
   <h1><%= @user.show_admin_status %></h1>
+
   <ul class="actions">
     <li>
       <%= link_to "Edit User", [:edit, :admin, @user], class: "edit" %>
@@ -11,3 +12,6 @@
     </li>
   </ul>
 </header>
+
+  <h2><%= @user.admin_to_s %></h2>
+  <h2><%= @user.active_status %></h2>
