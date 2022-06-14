@@ -8,12 +8,12 @@ class User < ApplicationRecord
 
   def show_admin_status
     # "#{email} (#{admin? ? 'Admin' : 'User'})"
-    "#{email} - #{admin_to_s} #{active_status}"
+    "#{email} - #{is_admin_to_s} #{active_status}"
     # email
     # admin_to_s
   end
 
-  def admin_to_s
+  def is_admin_to_s
     "#{admin? ? 'Admin' : 'User'}"
   end
 
@@ -23,5 +23,13 @@ class User < ApplicationRecord
 
   def archive!
     self.update(archived_at: Time.now)
+  end
+
+  def active_for_authentication?
+    super && archived_at.nil?
+  end
+
+  def inactive_message
+    archived_at.nil? ? super : :archived
   end
 end

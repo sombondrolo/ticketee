@@ -24,6 +24,6 @@ RSpec.feature "Admins can create new users >" do
     check "Is an admin?"
     click_button "Create User"
     expect(page).to have_content "User has been created."
-    expect(page).to have_content "admin@example.com Admin Active"
+    expect(page).to have_content "admin@example.com #{admin.is_admin_to_s} #{admin.active_status}"
   end
 end

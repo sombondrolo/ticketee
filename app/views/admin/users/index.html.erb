@@ -11,7 +11,7 @@
   <% @users.each do |user| %>
     <li>
       <%= link_to user.email, [:admin, user] %>
-      <%= user.admin_to_s %>
+      <%= user.is_admin_to_s %>
       <%= user.active_status %>
     </li>
   <% end %>
