@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="RM-221.5591.54">
+    <data-source name="Rails ticketee: test" uuid="b9b25074-eef7-49a2-97f5-1b555b73fbce">
+      <database-info product="SQLite" version="3.36.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.36.0.3" dbms="SQLITE" exact-version="3.36.0" exact-driver-version="3.36">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="Rails ticketee: development" uuid="dfb2c0b5-138b-4eb3-88c6-51db85a12dbc">
+      <database-info product="SQLite" version="3.36.0" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.36.0.3" dbms="SQLITE" exact-version="3.36.0" exact-driver-version="3.36">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>
