@@ -30,10 +30,12 @@
 </header>
 
 <ul class="tickets">
-  <% @project.tickets.each do |ticket| %>
+  <% @project.tickets.each_with_index do |ticket, i| %>
     <li>
-      #<%= ticket.id %> -
+      #<%= i+1 %> -
       <%= link_to ticket.name, [@project, ticket] %>
+      #<%= ticket.id %>
+      <%= render ticket.state if ticket.state %>
     </li>
   <% end %>
 </ul>
