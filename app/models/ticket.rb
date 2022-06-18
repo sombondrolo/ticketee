@@ -1,10 +1,16 @@
 class Ticket < ApplicationRecord
   validates :name,        presence: true
   validates :description, presence: true, length: { minimum: 10 }
+  before_create :assign_default_state
 
   belongs_to :project
   belongs_to :author, class_name: "User"
   has_one_attached :attachment
   has_many :comments, dependent: :destroy
   belongs_to :state, optional: true
+
+  private
+  def assign_default_state
+    self.state ||= State.default
+  end
 end
