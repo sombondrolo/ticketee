@@ -21,7 +21,15 @@ Rails.application.routes.draw do
   end
 
   resources :projects, only: [:index, :show, :edit, :update] do
-    resources :tickets
+    resources :tickets do
+      collection do
+        post :upload_file
+      end
+
+      member do
+        patch :watch
+      end
+    end
   end
 
   scope path: "tickets/:ticket_id", as: :ticket do
