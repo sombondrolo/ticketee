@@ -10,6 +10,7 @@ class Ticket < ApplicationRecord
   belongs_to :state, optional: true
   has_and_belongs_to_many :watchers,
   join_table: "ticket_watchers", class_name: "User"
+  has_and_belongs_to_many :tags
 
   private
   def assign_default_state

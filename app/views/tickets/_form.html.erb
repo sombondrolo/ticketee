@@ -4,5 +4,10 @@
   <%= form.text_area :description %>
   <%= form.file_field :attachment, label: "File" %>
 
+  <div class="form-group">
+    <%= label_tag :tag_names, "Tags" %>
+    <%= text_field_tag :tag_names, "", class: "form-control" %>
+  </div>
+
   <%= form.primary %>
 <% end %>

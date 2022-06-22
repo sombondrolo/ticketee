@@ -48,3 +48,17 @@ td.watchers {
     width: 100px
   }
 }
+
+.tag {
+  @extend .state, .mr-1, .mb-1, .border !optional;
+  color: black;
+  font-size: 85%;
+  a {
+    color: black;
+    &.remove {
+      font-family: "FontAwesome";
+      @extend .fa-close;
+      text-decoration: none;
+    }
+  }
+}

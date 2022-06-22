@@ -9,6 +9,9 @@ class TicketsController < ApplicationController
   def create
     @ticket = @project.tickets.build(ticket_params)
     @ticket.author = current_user
+    @ticket.tags = params[:tag_names].split(",").map do |tag|
+      Tag.find_or_initialize_by(name: tag.strip)
+    end
 
     if @ticket.save
       flash[:notice] = "Ticket has been created."
@@ -28,6 +31,10 @@ class TicketsController < ApplicationController
   end
 
   def update
+    @ticket.tags = params[:tag_names].split(",").map do |tag|
+      Tag.find_or_initialize_by(name: tag.strip)
+    end
+
     if @ticket.update(ticket_params)
       flash[:notice] = "Ticket has been updated."
       redirect_to [@project, @ticket]
