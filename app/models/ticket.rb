@@ -14,6 +14,7 @@ class Ticket < ApplicationRecord
 
   searcher do
     label :tag, from: :tags, field: "name"
+    label :state, from: :state, field: "name"
   end
 
   private
