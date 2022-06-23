@@ -6,7 +6,8 @@ ruby '2.7.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'sqlite3', '~> 1.4', group: [:development, :test]
+gem 'pg', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -71,3 +72,5 @@ gem "devise", "~> 4.7.3"
 gem "premailer-rails", "~> 1.11"
 
 gem "searcher", "~> 6.0"
+
+gem 'aws-sdk-s3', require: false

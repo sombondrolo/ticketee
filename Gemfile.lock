@@ -64,6 +64,22 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
+    aws-eventstream (1.1.1)
+    aws-partitions (1.472.0)
+    aws-sdk-core (3.115.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-kms (1.44.0)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.96.1)
+      aws-sdk-core (~> 3, >= 3.112.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.2.3)
+      aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.12.0)
@@ -120,6 +136,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jmespath (1.4.0)
     launchy (2.5.0)
       addressable (~> 2.7)
     listen (3.7.1)
@@ -140,6 +157,7 @@ GEM
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     popper_js (2.9.3)
     premailer (1.16.0)
       addressable
@@ -274,6 +292,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  aws-sdk-s3
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.1)
   bootstrap_form (= 4.5.0)
@@ -285,6 +304,7 @@ DEPENDENCIES
   font-awesome-rails (= 4.7.0.6)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pg
   premailer-rails (~> 1.11)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
