@@ -11,6 +11,7 @@ import "channels"
 import "jquery"
 import "popper.js"
 import "bootstrap"
+import "../src/tags"
 
 // require("jquery");
 // require("popper.js");
